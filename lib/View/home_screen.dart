@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_headlines_flutter/models/news_article.dart';
 import 'package:news_headlines_flutter/services/news_service.dart';
+import 'package:news_headlines_flutter/View/news_detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -48,9 +49,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       final article = _articles[index];
                       return Card(
                         margin: const EdgeInsets.only(bottom: 8),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12),
-                          child: Column(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => NewsDetailScreen(article: article),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               if (article.urlToImage != null && article.urlToImage!.isNotEmpty)
@@ -80,6 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ],
                           ),
+                        ),
                         ),
                       );
                     },
