@@ -1,17 +1,47 @@
-# news_headlines_flutter
+# News Headlines Flutter App
 
-A new Flutter project.
+This is a Flutter application that displays the latest news headlines using a news API.  
+The app follows the UI design provided in the assignment and supports offline caching.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Fetch latest news headlines from API
+- Display news articles in card layout
+- Detailed news screen with full article view
+- Image loading using CachedNetworkImage
+- Offline support using Hive
+- Clean UI following design specifications
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- Dart
+- REST API
+- Hive (for offline storage)
+- CachedNetworkImage
+- Google Fonts
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
- 
+## Project Structure
+
+lib/
+ ├── model/
+ ├── services/
+ ├── view/
+ ├── widgets/
+ └── main.dart
+
+## How to Run the Project
+
+1. Clone the repository
+2. Run the following commands:
+
+flutter pub get  
+flutter run
+
+## GitHub Repository
+
+[Paste your GitHub repository link here]
+
+## Author
+
+Isha Motsara
